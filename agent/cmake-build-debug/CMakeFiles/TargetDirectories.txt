@@ -1,0 +1,3 @@
+/home/mjkazin/school/cs487/proj1/agent/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mjkazin/school/cs487/proj1/agent/cmake-build-debug/CMakeFiles/agent.dir
+/home/mjkazin/school/cs487/proj1/agent/cmake-build-debug/CMakeFiles/edit_cache.dir
