@@ -2,15 +2,25 @@ package manager;
 
 import java.net.*;
 import java.io.*;
+import java.util.*;
+import java.util.concurrent.*;
 
 public class BeaconListener extends Thread{
     private Thread t;
     private String threadName;
     private int port;
+    private ArrayList<Agent> agents;
+    private ArrayList<AgentMonitor> monitors;
+    private Semaphore agent_sem;
+    private Semaphore monitor_sem;
 
-    public BeaconListener(String threadName, int port){
+    public BeaconListener(String threadName, int port, ArrayList<Agent> agents, ArrayList<AgentMonitor> monitors, Semaphore agent_sem, Semaphore monitor_sem){
         this.threadName = threadName;
         this.port = port;
+        this.agents = agents;
+        this.monitors = monitors;
+        this.agent_sem = agent_sem;
+        this.monitor_sem = monitor_sem;
     }
 
     @Override
@@ -73,16 +83,30 @@ public class BeaconListener extends Thread{
             byte[] bID = new byte[4];
             System.arraycopy(data,16,bID,0,4);
             int id = byteToInt(bID);
-            System.out.println("ID is : " + id);
+
             System.arraycopy(data,12,bID,0,4);
             int startUpTime = byteToInt(bID);
-            System.out.println("Start time is : " + startUpTime);
+
+            System.arraycopy(data,8,bID,0,4);
+            char IP[] = new char[4];
+
             System.arraycopy(data,4,bID,0,4);
             int timeInterval = byteToInt(bID);
-            System.out.println("Time interval is : " + timeInterval);
+
             System.arraycopy(data,0,bID,0,4);
             int cmdPort = byteToInt(bID);
-            System.out.println("Command Port is : " + cmdPort);
+
+            try {
+                agent_sem.acquire();
+
+                Agent agent = new Agent(id, startUpTime, timeInterval, IP, cmdPort);
+                agents.add(agent);
+
+                agent_sem.release();
+            }
+            catch (InterruptedException e){
+
+            }
         }
 
         @Override
