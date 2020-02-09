@@ -3,6 +3,7 @@ package manager;
 import java.net.*;
 import java.io.*;
 import java.util.*;
+import java.time.*;
 import java.util.concurrent.*;
 
 public class BeaconListener extends Thread{
@@ -12,20 +13,17 @@ public class BeaconListener extends Thread{
     private ArrayList<Agent> agents;
     private ArrayList<AgentMonitor> monitors;
     private Semaphore agent_sem;
-    private Semaphore monitor_sem;
 
-    public BeaconListener(String threadName, int port, ArrayList<Agent> agents, ArrayList<AgentMonitor> monitors, Semaphore agent_sem, Semaphore monitor_sem){
+    public BeaconListener(String threadName, int port, ArrayList<Agent> agents, ArrayList<AgentMonitor> monitors, Semaphore agent_sem){
         this.threadName = threadName;
         this.port = port;
         this.agents = agents;
         this.monitors = monitors;
         this.agent_sem = agent_sem;
-        this.monitor_sem = monitor_sem;
     }
 
     @Override
     public void start(){
-        System.out.println("Starting " +  threadName );
         if (t == null) {
             t = new Thread (this, threadName);
             t.start ();
@@ -34,7 +32,6 @@ public class BeaconListener extends Thread{
 
     @Override
     public void run(){
-        System.out.println("Running " +  threadName );
         byte buffer[] = new byte[1024];
         DatagramPacket incoming = new DatagramPacket(buffer, buffer.length);
         DatagramSocket ds = null;
@@ -48,8 +45,8 @@ public class BeaconListener extends Thread{
             return;
         }
 
+        System.out.println("Listening for beacon on port " + ds.getLocalPort() + "...");
         while(true){
-            System.out.println("Listening for beacon on port " + ds.getLocalPort() + "...");
             try {
                 ds.receive(incoming);
             }
@@ -97,16 +94,44 @@ public class BeaconListener extends Thread{
             int cmdPort = byteToInt(bID);
 
             try {
+                AgentMonitor monitor = null;
+
                 agent_sem.acquire();
 
                 Agent agent = new Agent(id, startUpTime, timeInterval, IP, cmdPort);
-                agents.add(agent);
+                Agent oldAgent = newAgent(agent);
+                if(oldAgent == null){
+                    agents.add(agent);
+                    System.out.println();
+                    System.out.println("New Agent arrived... ");
+                    agent.printAgent();
+                    monitor = new AgentMonitor("m", agent, agents, agent_sem);
+                    monitors.add(monitor);
+                }
+                else{
+                    oldAgent.lastBeacon = Instant.now().getEpochSecond();
+                }
 
                 agent_sem.release();
+
+                if(monitor != null){
+                    monitor.start();
+                }
             }
             catch (InterruptedException e){
 
             }
+        }
+
+        private Agent newAgent(Agent a){
+            Agent temp;
+            for(int i = 0; i < agents.size(); ++i){
+                temp = agents.get(i);
+                if(a.equals(temp)){
+                    return temp;
+                }
+            }
+            return null;
         }
 
         @Override
