@@ -120,7 +120,7 @@ int main(int argc, char* argv[]){
 
     destIP = new string("127.0.0.1");
     srcIP = new string("127.0.0.1");
-    
+
     if(argc == 3){
         destIP = new string(argv[1]);
         srcIP = new string(argv[2]);
@@ -131,7 +131,7 @@ int main(int argc, char* argv[]){
     beacon->ID = (u_int32_t)rand();
     beacon->StartUpTime = (u_int32_t)time(NULL);
     beacon->timeInterval = 3;
-    beacon->IP = inet_addr(destIP->c_str());
+    beacon->IP = inet_addr(srcIP->c_str());
     beacon->CmdPort = UDP_PORT + (rand() % 100);
     pthread_t beaconSender = *(new pthread_t);
     pthread_t cmdReciever = *(new pthread_t);

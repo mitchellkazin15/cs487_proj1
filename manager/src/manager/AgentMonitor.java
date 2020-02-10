@@ -35,7 +35,7 @@ public class AgentMonitor extends Thread {
     public void run(){
         try {
 
-            ServerSocket ss = new ServerSocket(agent.cmdPort, 0, agent.IP);
+            ServerSocket ss = new ServerSocket(agent.cmdPort, 0, InetAddress.getByName(null));
             System.out.println("Waiting for agent " + agent.id + " to execute commands on port: " + ss.getLocalPort() + "...");
             Socket s = ss.accept();
             String buffer;
