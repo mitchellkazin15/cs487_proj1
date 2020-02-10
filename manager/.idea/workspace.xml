@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a001bf-913c-440b-95c8-7a53a333cf5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../README" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/agent" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/agent" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agent/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/Agent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/manager/manager/AgentMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/AgentMonitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener$DataProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener$DataProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/Agent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/manager/AgentMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/AgentMonitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager/BeaconListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/BeaconListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/Manager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,12 +36,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4345" />
+          <entry key="java" value="5177" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4345" />
+          <entry key="JAVA" value="5177" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,9 +63,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/manager/Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="135">
+              <caret line="9" column="105" selection-start-line="9" selection-start-column="105" selection-end-line="9" selection-end-column="105" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#265#272#0" expanded="true" />
                 <element signature="e#332#346#0" expanded="true" />
               </folding>
@@ -68,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/manager/BeaconListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="2250">
+              <caret line="150" column="28" lean-forward="true" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/manager/AgentMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="37" column="91" selection-start-line="37" selection-start-column="91" selection-end-line="37" selection-end-column="91" />
+            <state relative-caret-position="225">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/manager/Agent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="105">
+              <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,7 +204,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581307406245" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581310546571" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -306,9 +315,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="135">
+          <caret line="9" column="105" selection-start-line="9" selection-start-column="105" selection-end-line="9" selection-end-column="105" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#265#272#0" expanded="true" />
             <element signature="e#332#346#0" expanded="true" />
           </folding>
@@ -317,8 +327,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/BeaconListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="2250">
+          <caret line="150" column="28" lean-forward="true" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -327,8 +337,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/Agent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state relative-caret-position="105">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -337,8 +347,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/AgentMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="37" column="91" selection-start-line="37" selection-start-column="91" selection-end-line="37" selection-end-column="91" />
+        <state relative-caret-position="225">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

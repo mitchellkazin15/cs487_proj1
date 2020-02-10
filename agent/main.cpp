@@ -31,10 +31,14 @@
 
 using namespace std;
 
+//This file is the main and only agent src file. It launches a thread to emit a beacon and execute commands from server
+
+//these are constant that the agent will use until termination
 #define UDP_PORT 42636
 string *destIP;
 string *srcIP;
 
+//Structure that encodes information to be sent in a UDP beacon
 typedef struct BEACON
 {
     u_int32_t ID;               // randomly generated during startup
@@ -44,6 +48,7 @@ typedef struct BEACON
     u_int32_t CmdPort; 	        // the client listens to this port for cmd
 } beacon_t;
 
+//Continually sends beacons every time interval seconds
 int sendBeacon(int cSock, beacon_t *buffer){
     cout << "Emitting Beacon..." << endl;
     while(true){
@@ -60,6 +65,7 @@ int sendBeacon(int cSock, beacon_t *buffer){
     return 0;
 }
 
+// BeaconSender thread starts here and establishes UDP socket connection
 void * socketConnect(void *beacon){
     int cSock;
     if ((cSock = socket(AF_INET, SOCK_DGRAM, 0)) < 0){
@@ -82,6 +88,7 @@ void * socketConnect(void *beacon){
     sendBeacon(cSock, buffer);
 }
 
+//Command Agent thread starts here and establishes tcp conection
 void * cmdAgent(void *beacon){
     beacon_t *beac = (beacon_t *)beacon;
 
@@ -116,6 +123,7 @@ void * cmdAgent(void *beacon){
     cout << "Packet sent" << endl;
 }
 
+//Execution starts here. reads IP's from command line, builds a beacon, and starts the threads
 int main(int argc, char* argv[]){
 
     destIP = new string("127.0.0.1");
@@ -125,18 +133,21 @@ int main(int argc, char* argv[]){
         destIP = new string(argv[1]);
         srcIP = new string(argv[2]);
     }
+    else if(argc == 2){
+        destIP = new string(argv[1]);
+    }
 
     srand(time(0));
     beacon_t *beacon = (beacon_t*)malloc(sizeof(beacon_t));
     beacon->ID = (u_int32_t)rand();
     beacon->StartUpTime = (u_int32_t)time(NULL);
     beacon->timeInterval = 3;
-    beacon->IP = inet_addr(srcIP->c_str());
+    beacon->IP = inet_addr(destIP->c_str());
     beacon->CmdPort = UDP_PORT + (rand() % 100);
     pthread_t beaconSender = *(new pthread_t);
     pthread_t cmdReciever = *(new pthread_t);
     pthread_create(&beaconSender, NULL, socketConnect, (void *)beacon);
-    sleep(beacon->timeInterval);
+    sleep(2);
     pthread_create(&cmdReciever, NULL, cmdAgent, (void *)beacon);
     pthread_join(cmdReciever, NULL);
     pthread_join(beaconSender, NULL);

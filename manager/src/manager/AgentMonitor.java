@@ -7,6 +7,7 @@ import java.util.*;
 import java.time.*;
 import java.util.concurrent.*;
 
+//this class establishes a TCP connection with its assigned agent and recieves OS and time information
 public class AgentMonitor extends Thread {
     private Thread t;
     private String threadName;
@@ -35,7 +36,7 @@ public class AgentMonitor extends Thread {
     public void run(){
         try {
 
-            ServerSocket ss = new ServerSocket(agent.cmdPort, 0, InetAddress.getByName(null));
+            ServerSocket ss = new ServerSocket(agent.cmdPort, 0, agent.IP);
             System.out.println("Waiting for agent " + agent.id + " to execute commands on port: " + ss.getLocalPort() + "...");
             Socket s = ss.accept();
             String buffer;

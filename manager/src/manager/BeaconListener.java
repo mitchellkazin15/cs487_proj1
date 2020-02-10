@@ -6,6 +6,7 @@ import java.util.*;
 import java.time.*;
 import java.util.concurrent.*;
 
+//This class establishes UDP connection with clients
 public class BeaconListener extends Thread{
     private Thread t;
     private String threadName;
@@ -30,6 +31,7 @@ public class BeaconListener extends Thread{
         }
     }
 
+    //When thread is started this function connects to a socket and recieves UDP packets that it sends to DataProcessor
     @Override
     public void run(){
         byte buffer[] = new byte[1024];
@@ -60,6 +62,9 @@ public class BeaconListener extends Thread{
         }
     }
 
+    //This is a private class that processes data from BeaconListener
+    //A new thread is created every time a beacon is recieved
+    //If beacon is from a new client, an Agent Monitor thread is created
     private class DataProcessor extends Thread {
         private Thread t;
         private String threadName;
@@ -130,6 +135,7 @@ public class BeaconListener extends Thread{
             }
         }
 
+        //checks if beacon is from a new agent or not
         private Agent newAgent(Agent a){
             Agent temp;
             for(int i = 0; i < agents.size(); ++i){
@@ -149,6 +155,7 @@ public class BeaconListener extends Thread{
             }
         }
 
+        //converts byte array to int
         private int byteToInt(byte[] bytes){
             return   bytes[3] & 0xFF |
                     (bytes[2] & 0xFF) << 8 |
@@ -157,6 +164,7 @@ public class BeaconListener extends Thread{
         }
 
 
+        //reverses a byte array
         private void reverse(byte[] array) {
             if (array == null) {
                 return;

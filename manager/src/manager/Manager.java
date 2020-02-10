@@ -6,6 +6,8 @@ import java.util.*;
 import java.time.*;
 import java.util.concurrent.*;
 
+//This class is where execution starts for Manager
+//It initializes threads and initiaizes their shared resources and Semeaphores to ensure mutual exclusion
 public class Manager {
 
     public static final int PORT = 42636;

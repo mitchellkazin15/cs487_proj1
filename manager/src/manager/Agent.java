@@ -5,6 +5,7 @@ import java.util.*;
 import java.time.*;
 import java.util.concurrent.*;
 
+//This class stores information about individual agents
 public class Agent {
     public int id;
     public int startUpTime;

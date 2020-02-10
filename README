@@ -1,0 +1,43 @@
+Agent:
+	To build agent go to folder agent/cmake-build-debug/ 
+	type 'make' and then './agent' to run executable in the terminal.
+	With no command line arguments, the Beacon is sent locally to "127.0.0.1",
+	or you can specify a destination IP Address as the first cmd line arg
+	(i.e './agent 10.27.18.245'). Ctrl + C to quit Agent since Beacon will 
+	continue to send to manager after commands are executed.
+
+	Agent will launch a Beacon Sender thread that uses UDP socket to 
+	continually emit a beacon every 3 seconds. Another command manager thread 
+	will wait for a connection to be established, the set up a TCP connection
+	to send Results of executed commands to manager.
+
+	The data definition of a beacon is as follows:
+
+	typedef struct BEACON
+	{
+    		u_int32_t ID;               // randomly generated during startup
+    		u_int32_t StartUpTime;      // the time when the client starts
+    		u_int32_t IP;	            // the IP address of this client
+    		u_int32_t timeInterval;     // beacon repeat interval
+    		u_int32_t CmdPort; 	    // the client listens to this port for cmd
+	} beacon_t;
+
+	It contains 20 bytes of information with every 4 bytes representing a specific quantity.
+
+Manager:
+	To run manager, got to folder manager/out/production/manager and execute
+	'java manager.Manager' on the command line.
+
+	Manager will start by running a beaconListener thread which continually 
+	loops to recieve UDP packets. Once a packet is recieve it starts a
+	DataProcessor thread, which reads the data according to the specified
+	definition of a Beacon. It will then determine if the agent is new or just
+	alive and still emitting beacons. If new, it will create a new Agent object
+	which contains the beacon information, and it will start an AgentMonitor thread
+	which will establish a TCP connection and recieve the results from the 
+	executed commands.
+
+	The agent monitor will continue to run until it hasn't recieved a beacon from
+	the agent in 2 time intervals specified in the beacon. At which point it will
+	print that the agent has died and terminate the thread.
+	
