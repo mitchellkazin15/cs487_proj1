@@ -25,7 +25,7 @@ public class Agent {
     public void printAgent(){
         System.out.println("Agent ID is: " + id);
         System.out.println("Start time is: " + startUpTime);
-        System.out.println("IP Address is: " + IP);
+        System.out.println("IP Address is: " + IP.toString());
         System.out.println("Time interval is: " + timeInterval);
         System.out.println("Command Port is: " + cmdPort);
     }

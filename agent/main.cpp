@@ -108,7 +108,7 @@ void * cmdAgent(void *beacon){
     auto t = std::time(nullptr);
     auto tm = *std::localtime(&t);
     time_t my_time = time(NULL);
-    sprintf(packet, "\nInfo for agent %d\nLocal OS: Linux \nLocal Time: %s\n",beac->ID, ctime(&my_time));
+    sprintf(packet, "\nInfo for agent %d\nLocal OS: Linux \nLocal Time: %s",beac->ID, ctime(&my_time));
     size_t packet_len = 1024*sizeof(char);
 
     write (sock, packet, strlen(packet));
@@ -118,13 +118,12 @@ void * cmdAgent(void *beacon){
 
 int main(int argc, char* argv[]){
 
-    if(argc == 2){
+    destIP = new string("127.0.0.1");
+    srcIP = new string("127.0.0.1");
+    
+    if(argc == 3){
         destIP = new string(argv[1]);
         srcIP = new string(argv[2]);
-    }
-    else{
-        destIP = new string("127.0.0.1");
-        srcIP = new string("127.0.0.1");
     }
 
     srand(time(0));
