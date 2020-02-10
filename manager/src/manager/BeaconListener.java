@@ -105,7 +105,7 @@ public class BeaconListener extends Thread{
                     System.out.println();
                     System.out.println("New Agent arrived... ");
                     agent.printAgent();
-                    monitor = new AgentMonitor("m", agent, agents, agent_sem);
+                    monitor = new AgentMonitor("m", port, agent, agents, agent_sem);
                     monitors.add(monitor);
                 }
                 else{

@@ -28,7 +28,6 @@ public class Agent {
         System.out.println("IP Address is: " + IP);
         System.out.println("Time interval is: " + timeInterval);
         System.out.println("Command Port is: " + cmdPort);
-        System.out.println("Last Beacon: " + lastBeacon);
     }
 
     @Override

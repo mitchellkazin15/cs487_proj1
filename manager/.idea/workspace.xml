@@ -2,18 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a001bf-913c-440b-95c8-7a53a333cf5f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../agent/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/agent" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/agent" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agent/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/Agent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/AgentMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/AgentMonitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener$DataProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener$DataProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/Manager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/manager/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/Agent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/manager/AgentMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/AgentMonitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/manager/BeaconListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/BeaconListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manager/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/Manager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,12 +41,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3668" />
+          <entry key="java" value="4088" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3668" />
+          <entry key="JAVA" value="4088" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -74,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/manager/BeaconListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="195">
+              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/manager/AgentMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="46" column="74" lean-forward="true" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
+            <state relative-caret-position="342">
+              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/manager/Agent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="338">
+              <caret line="26" column="60" lean-forward="true" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -201,7 +208,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581276593438" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581296650247" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -249,7 +256,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="539" y="121" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533235" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -321,20 +327,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/BeaconListener.java">
+    <entry file="file://$PROJECT_DIR$/src/manager/Agent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="338">
+          <caret line="26" column="60" lean-forward="true" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/manager/Agent.java">
+    <entry file="file://$PROJECT_DIR$/src/manager/BeaconListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="195">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -343,8 +349,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/manager/AgentMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="46" column="74" lean-forward="true" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
+        <state relative-caret-position="342">
+          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
