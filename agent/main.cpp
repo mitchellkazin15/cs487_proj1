@@ -32,7 +32,6 @@
 using namespace std;
 
 #define UDP_PORT 42636
-string *localIP;
 string *destIP;
 
 typedef struct BEACON
@@ -52,7 +51,7 @@ int sendBeacon(int cSock, beacon_t *buffer){
         int32_t sent_bytes = send(cSock, buffer, buffer_len, 0);
         if (sent_bytes < 0)
         {
-            fprintf(stderr,"cannot send. \n");
+            fprintf(stderr,"Failed to send Beacon \n");
         }
         sleep(buffer->timeInterval);
     }
@@ -119,11 +118,9 @@ void * cmdAgent(void *beacon){
 int main(int argc, char* argv[]){
 
     if(argc == 3){
-        localIP = new string(argv[1]);
         destIP = new string(argv[2]);
     }
     else{
-        localIP = new string("127.0.0.1");
         destIP = new string("127.0.0.1");
     }
 

@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a001bf-913c-440b-95c8-7a53a333cf5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../agent/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/agent.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/cmake-build-debug/agent" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/cmake-build-debug/agent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../agent/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../agent/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/Agent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/AgentMonitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/AgentMonitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener$DataProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener$DataProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/manager/manager/BeaconListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manager/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manager/AgentMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/AgentMonitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manager/BeaconListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager/BeaconListener.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/src/manager/AgentMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+              <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,8 +121,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="539" />
-    <option name="y" value="121" />
+    <option name="x" value="383" />
+    <option name="y" value="127" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -208,7 +190,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581296650247" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581301239673" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -255,7 +237,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="539" y="121" width="1400" height="1000" extended-state="0" />
+    <frame x="383" y="127" width="1400" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533235" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -350,7 +333,7 @@
     <entry file="file://$PROJECT_DIR$/src/manager/AgentMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
