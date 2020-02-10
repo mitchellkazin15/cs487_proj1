@@ -33,12 +33,13 @@ using namespace std;
 
 #define UDP_PORT 42636
 string *destIP;
+string *srcIP;
 
 typedef struct BEACON
 {
     u_int32_t ID;               // randomly generated during startup
     u_int32_t StartUpTime;      // the time when the client starts
-    char IP[4];	                // the IP address of this client
+    u_int32_t IP;	                // the IP address of this client
     u_int32_t timeInterval;     // beacon repeat interval
     u_int32_t CmdPort; 	        // the client listens to this port for cmd
 } beacon_t;
@@ -51,7 +52,7 @@ int sendBeacon(int cSock, beacon_t *buffer){
         int32_t sent_bytes = send(cSock, buffer, buffer_len, 0);
         if (sent_bytes < 0)
         {
-            fprintf(stderr,"Failed to send Beacon \n");
+            fprintf(stderr,"Failed to send Beacon to %s \n", destIP->c_str());
         }
         sleep(buffer->timeInterval);
     }
@@ -117,11 +118,13 @@ void * cmdAgent(void *beacon){
 
 int main(int argc, char* argv[]){
 
-    if(argc == 3){
-        destIP = new string(argv[2]);
+    if(argc == 2){
+        destIP = new string(argv[1]);
+        srcIP = new string(argv[2]);
     }
     else{
         destIP = new string("127.0.0.1");
+        srcIP = new string("127.0.0.1");
     }
 
     srand(time(0));
@@ -129,6 +132,7 @@ int main(int argc, char* argv[]){
     beacon->ID = (u_int32_t)rand();
     beacon->StartUpTime = (u_int32_t)time(NULL);
     beacon->timeInterval = 3;
+    beacon->IP = inet_addr(destIP->c_str());
     beacon->CmdPort = UDP_PORT + (rand() % 100);
     pthread_t beaconSender = *(new pthread_t);
     pthread_t cmdReciever = *(new pthread_t);

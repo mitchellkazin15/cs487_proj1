@@ -85,7 +85,14 @@ public class BeaconListener extends Thread{
             int startUpTime = byteToInt(bID);
 
             System.arraycopy(data,8,bID,0,4);
-            char IP[] = new char[4];
+            InetAddress IP = null;
+            try {
+                reverse(bID);
+                IP = InetAddress.getByAddress(bID);
+            }
+            catch(UnknownHostException e){
+                System.out.println("Could not resolve address");
+            }
 
             System.arraycopy(data,4,bID,0,4);
             int timeInterval = byteToInt(bID);

@@ -9,11 +9,11 @@ public class Agent {
     public int id;
     public int startUpTime;
     public int timeInterval;
-    public char IP[];
+    public InetAddress IP;
     public int cmdPort;
     public long lastBeacon;
 
-    public Agent(int id, int startUpTime, int timeInterval, char IP[], int cmdPort){
+    public Agent(int id, int startUpTime, int timeInterval, InetAddress IP, int cmdPort){
         this.id = id;
         this.startUpTime = startUpTime;
         this.timeInterval = timeInterval;

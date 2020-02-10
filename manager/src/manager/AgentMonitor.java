@@ -1,5 +1,6 @@
 package manager;
 
+import java.math.BigInteger;
 import java.net.*;
 import java.io.*;
 import java.util.*;
@@ -33,7 +34,8 @@ public class AgentMonitor extends Thread {
     @Override
     public void run(){
         try {
-            ServerSocket ss = new ServerSocket(agent.cmdPort, 0, InetAddress.getByName(null));
+
+            ServerSocket ss = new ServerSocket(agent.cmdPort, 0, agent.IP);
             System.out.println("Waiting for agent " + agent.id + " to execute commands on port: " + ss.getLocalPort() + "...");
             Socket s = ss.accept();
             String buffer;
@@ -45,7 +47,7 @@ public class AgentMonitor extends Thread {
             }
         }
         catch (IOException e){
-            System.out.println("Could not connect to tcp socket: " + agent.cmdPort);
+            System.out.println("Could not connect to " + agent.IP.toString() + " on port: " + agent.cmdPort);
         }
         try {
             while (true) {
